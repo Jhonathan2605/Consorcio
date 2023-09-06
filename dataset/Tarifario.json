@@ -1,0 +1,29 @@
+{
+	"name": "Tarifario",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "tarifario.csv",
+				"folderPath": "MEDICAMENTOS",
+				"fileSystem": "trabajousuarios"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Razon_Social|Nit_del_Proveedor|Codigo_Interno_del_proveedor|Codigo_Generico|Tarifa_de_la_unidad_Farmaceutica|Tarifa_de_la_unidad_Farmaceutica_(RETROACTIVO)|Accion_RETROACTIVO|Numero_de_Expediente_del_INVIMA|Numero_Trazador(Expediente-consecutivo)|Clasificacion_Anatomico_Terapeutica_-ATC-|\"Codigo_CUM(20_digitos)|Registro_Sanitario_INVIMA_del_Medicamento|Descripcion_Generica_del_Medicamento_(DCI)|Descripcion_del_Medicamento_Comercial|Forma_Farmaceutica_del_Medicamento|Presentacion_Comercial_del_medicamento|Unidad_Minima_de_Dispensacion|Laboratorio_del_Medicamento|Opcion_Negociada|Tipo_de_Inclusion_del_Medicamento|Tarifa-tope_regulado|Modalidad_de_Contratacion|Fecha_Inicial_de_Vigencia_de_Tarifa_de_Medicamento|Fecha_Final_de_Vigencia_de_Tarifa_de_Medicamento",
+				"type": "String"
+			}
+		]
+	}
+}
